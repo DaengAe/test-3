@@ -3,36 +3,24 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        int T = sc.nextInt();
+        int T = sc.nextInt(); // 테스트 케이스 수
 
         for (int t = 0; t < T; t++) {
-            int x1 = sc.nextInt();
-            int y1 = sc.nextInt();
-            int x2 = sc.nextInt();
-            int y2 = sc.nextInt();
+            int N = sc.nextInt(); // 건물 수
+            int K = sc.nextInt(); // 규칙 수
+            int D[] = new int[N]; // 건설 시간
 
-            int n = sc.nextInt();
-            int count = 0;
-
-            for (int i = 0; i < n; i++) {
-                int cx = sc.nextInt();
-                int cy = sc.nextInt();
-                int r = sc.nextInt();
-
-                int distStart = (x1 - cx) * (x1 - cx) + (y1 - cy) * (y1 - cy);
-
-                int distEnd = (x2 - cx) * (x2 - cx) + (y2 - cy) * (y2 - cy);
-                int rSquared = r * r;
-
-                if ((distStart < rSquared && distEnd >= rSquared) ||
-                        (distStart >= rSquared && distEnd < rSquared)) {
-                    count++;
-                }
+            for(int n=0; n<N; n++){ //건설 시간을 배열로 저장
+                D[n] = sc.nextInt();
             }
-            System.out.println(count);
-        }
+            for(int n=0; n<N; n++){
+                int X = sc.nextInt();
+                int Y = sc.nextInt();
+            }
+            int W = sc.nextInt();
 
+
+        }
         sc.close();
     }
 }
